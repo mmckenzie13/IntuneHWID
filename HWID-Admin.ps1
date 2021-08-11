@@ -6,7 +6,7 @@
 Get-ChildItem 'C:\HWIDZIP' -Filter *.zip | Expand-Archive -DestinationPath 'C:\HWID-Extracted' -Force
 
 ## Combine CSVs into One for Intune Import ##
-cd C:\HWID-Extracted
+Set-Location C:\HWID-Extracted
 Get-ChildItem -Filter *.csv | Select-Object -ExpandProperty FullName | Import-Csv | Export-Csv .\FullAutoPilotHWIDList.csv -NoTypeInformation -Append
 
 <# Upload FullAutoPilotHWIDList.csv to https://devicemanagement.portal.azure.com/#blade/Microsoft_Intune_Enrollment/AutoPilotDevicesBlade #>
