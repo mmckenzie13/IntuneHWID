@@ -36,7 +36,7 @@ $Mail.To = "destination@customer.com"
 $Mail.Subject = "HWID Hash"
 $Mail.Body ="HWID Hash"
 $Mail.Attachments.Add($attachment)
-$Mail.Display()
+##$Mail.Display() - To Test if needed, uncomment ##
 $Mail.Send()
 }
 ## End of Workstation Script ##
