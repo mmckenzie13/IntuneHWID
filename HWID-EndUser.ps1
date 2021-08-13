@@ -33,7 +33,7 @@ catch {
 $Outlook = New-Object -ComObject Outlook.Application
 $Mail = $Outlook.CreateItem(0)
 $Mail.To = "destination@customer.com"
-$Mail.Subject = "HWID Hash"
+$Mail.Subject = "$subject"
 $Mail.Body ="HWID Hash"
 $Mail.Attachments.Add($attachment)
 ##$Mail.Display() - To Test if needed, uncomment ##
